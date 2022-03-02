@@ -1,0 +1,19 @@
+.form__item {
+  border: 0;
+  width: 100%;
+  height: 24px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #000000;
+  background-color: transparent;
+  margin-top: 5px;
+  font-size: 14px;
+  line-height: 17px;
+  font-family: inherit;
+  opacity: 0.2;
+}
+
+
+/* Замена цвета внешней линии при фокусе поля ввода */
+.form__item:focus {
+  outline-color: #000;
+}

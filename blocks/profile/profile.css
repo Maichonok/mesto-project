@@ -1,0 +1,20 @@
+.profile {
+  display: grid;
+  grid-template-columns: 165px 336px;
+  padding: 40px 0 0;
+  gap: 3.75px;
+}
+
+
+@media screen and (max-width: 699px) {
+  .profile  {
+    grid-template-columns: 100%;
+ }
+}
+
+@media screen and (max-width: 320px) {
+  .profile  {
+    gap: 22.25px;
+    padding: 38.25px 0 0;
+ }
+}
