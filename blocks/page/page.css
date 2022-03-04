@@ -15,19 +15,26 @@
   padding: 0 200px 0 200px;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1279px) {
   .page {
     padding: 0 100px 0 100px;
   }
 }
 
-@media screen and (max-width: 699px) {
+
+@media screen and (max-width: 1023px) {
+  .page {
+    padding: 0 80px 0 80px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .page {
     padding: 0 50px 0 50px;
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 464px) {
   .page {
     padding: 0;
   }
