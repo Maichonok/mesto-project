@@ -1,10 +1,19 @@
 .profile__info {
   display: grid;
+  /*! align-items: baseline; */
+  gap: 16px 18px;
+  /*! max-width: 336px; */
+  grid-template-columns: 1fr min-content;
+  align-self: center;
+}
+
+/* .profile__info {
+  display: grid;
   align-items: baseline;
   gap: 16px 18px;
   max-width: 336px;
   grid-template-columns: 1fr min-content;
-}
+} */
 
 
 @media screen and (max-width:1023px) {
