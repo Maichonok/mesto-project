@@ -1,4 +1,4 @@
-.form__item {
+.popup__item {
   border: none;
   width: 100%;
   box-sizing: border-box;
@@ -15,5 +15,5 @@
 .popup__item::placeholder {
   font-size: 14px;
   line-height: 17px;
-  /* color: black; */
+  color: #000;
 }
