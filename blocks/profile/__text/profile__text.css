@@ -5,11 +5,16 @@
 }
 
 
+@media screen and (max-width:830px) {
+  .profile__text {
+    text-align: center;
+    margin: 0;
+  }
+}
+
 @media screen and (max-width:320px) {
   .profile__text {
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
-    margin: 0;
   }
 }

@@ -1,0 +1,14 @@
+.popup__input-container {
+  box-sizing: border-box;
+  max-width: 358px;
+  margin: 0;
+  padding: 0;
+  padding-top: 18px;
+  border: none;
+}
+
+@media screen and (max-width:420px) {
+  .popup__input-container {
+    padding-top: 50px;
+  }
+}

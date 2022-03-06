@@ -16,18 +16,17 @@
 } */
 
 
-@media screen and (max-width:1023px) {
+/* @media screen and (max-width:1023px) {
   .profile__info {
     margin: 0;
     padding-top: 26px;
     gap: 7px 10px;
     grid-column: -1/2;
-    /* grid-row: 2/2; */
     text-align: center;
   }
-}
+} */
 
-@media screen and (max-width:767px) {
+@media screen and (max-width:830px) {
   .profile__info {
     grid-column: 1/3;
     grid-row: 2/2;
