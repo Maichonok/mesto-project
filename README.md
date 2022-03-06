@@ -16,6 +16,6 @@
 
 **Используемые инструменты**
 
-Тестирование верстки в Mozilla Firefox v97.0.1 с помощью расширения Pixel Perfect Pro.
-Картинки оптимизированы с помощью[TinyPNG](https://tinypng.com/)
+* Тестирование верстки в Mozilla Firefox v97.0.1 с помощью расширения Pixel Perfect Pro.
+* Картинки оптимизированы с помощью[TinyPNG](https://tinypng.com/)
 
