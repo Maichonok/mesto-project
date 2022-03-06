@@ -1,21 +1,17 @@
 .profile {
-  display: grid;
-  grid-template-columns: 120px 336px;
   padding: 40px 0 0;
-  gap: 0 30px;
-
+  display: flex;
+  justify-content: space-between;
 }
 
 
-@media screen and (max-width: 830px) {
+@media screen and (max-width: 1080px) {
   .profile  {
-    grid-template-columns: 100%;
-    gap: 22.25px 0;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 36px;
  }
 }
 
-@media screen and (max-width: 464px) {
-  .profile  {
-    gap: 25px 0;
-  }
-}
+
