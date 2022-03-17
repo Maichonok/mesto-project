@@ -1,3 +1,8 @@
 .popup_open {
-  display: flex;
+  /* display: flex; */
+
+  /* animated toggle */
+  opacity: 1;
+  height: auto;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
 }
