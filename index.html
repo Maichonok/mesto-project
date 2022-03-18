@@ -79,32 +79,32 @@
    <footer class="footer">
     <p class="footer__copyright">&copy; 2022&period; Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup" id="edit-profile-popup">
     <div class="popup__container">
       <button class="popup__close-btn" type="button" aria-label="Закрыть форму"></button>
       <form class="popup__form" name="edit-profile-form">
         <h3 class="popup__heading">Редактировать профиль</h3>
         <fieldset class="popup__input-container">
-          <input type="text" class="popup__item" id="profile__name" name="name" placeholder="Введите ваше имя">
-          <input type="text" class="popup__item" id="profile__text" name="profession" placeholder="Ваш род деятельности">
+          <input type="text" class="popup__item" name="name" placeholder="Введите ваше имя">
+          <input type="text" class="popup__item" name="profession" placeholder="Ваш род деятельности">
         </fieldset>
         <button type="submit" class="popup__save-btn">Сохранить</button>
       </form>
     </div>
   </div>
-  <!-- <div class="popup">
+  <div class="popup" id="new-place-popup">
     <div class="popup__container">
       <button class="popup__close-btn" type="button" aria-label="Закрыть форму"></button>
       <form class="popup__form" name="add-place-form">
         <h3 class="popup__heading">Новое место</h3>
         <fieldset class="popup__input-container">
-          <input type="text" class="popup__item" id="profile__name" name="" placeholder="Название">
-          <input type="text" class="popup__item" id="profile__text" name="" placeholder="Ссылка на картинку">
+          <input type="text" class="popup__item" name="title" placeholder="Название">
+          <input type="url" class="popup__item" name="link" placeholder="Ссылка на картинку">
         </fieldset>
         <button type="submit" class="popup__create-btn">Создать</button>
       </form>
     </div>
-  </div> -->
+  </div>
   <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
