@@ -133,7 +133,7 @@ formNewPlace.addEventListener('submit', function (evt) {
     </li>
   `);
 
-  const listElement = document.querySelector(".cards__list");
+  const listElement = document.querySelector('.cards__list');
 
 
   listElement.prepend(card);
@@ -154,5 +154,18 @@ function htmlToElement(html) {
 }
 
 
-const likeButtons = document.querySelector('.card__like-btn');
+// const likeButtons = document.querySelectorAll('.card__like-btn');
+
+document.querySelectorAll('.card__like-btn')
+  .forEach(likeButtons => {
+    likeButtons.addEventListener('click', likeCards);
+  });
+
+  function likeCards(evt) {
+    let like = evt.target;
+    // like.classList.add('card__like_active-btn');
+    like.classList.toggle('card__like_active-btn');
+}
+
+
 
