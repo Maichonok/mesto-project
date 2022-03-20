@@ -11,6 +11,7 @@ editButton.addEventListener('click', openPopup);
 //заполнить форму начальными значениями из полей профиля
 editButton.addEventListener('click', prefillEditProfileForm);
 
+//выбрать все closebutton и привязать логику закрытия попапов
 document.querySelectorAll('.popup__close-btn')
   .forEach(closeButton => {
     closeButton.addEventListener('click', closePopup);
@@ -153,9 +154,7 @@ function htmlToElement(html) {
   return template.content.firstChild;
 }
 
-
-// const likeButtons = document.querySelectorAll('.card__like-btn');
-
+//like card
 document.querySelectorAll('.card__like-btn')
   .forEach(likeButtons => {
     likeButtons.addEventListener('click', likeCards);
@@ -163,9 +162,43 @@ document.querySelectorAll('.card__like-btn')
 
   function likeCards(evt) {
     let like = evt.target;
-    // like.classList.add('card__like_active-btn');
     like.classList.toggle('card__like_active-btn');
 }
 
+//delete card
+document.querySelectorAll('.card__trash-btn')
+  .forEach(trashButtons => {
+    trashButtons.addEventListener('click', deleteCard);
+  });
 
+function deleteCard(evt) {
+  let deleteButton = evt.target;
+  let card = deleteButton.closest('.card');
+  card.remove();
+}
+
+//popup image
+// при клике на изобр открывается модокно с этим изоб
+
+document.querySelectorAll('.card__pic')
+  .forEach(image => {
+    image.addEventListener('click', previewImage);
+  });
+
+function previewImage(evt) {
+  let popup = document.querySelector('#image-preview');
+  popup.classList.add('popup_open');
+
+
+  let popupImage = document.querySelector('#image-preview .popup__image');
+  let popupTitle = document.querySelector('#image-preview .popup__title-image');
+
+  let cardImage= evt.target;
+  let cardTitle = cardImage.nextElementSibling.querySelector('.card__title');
+  console.log(cardImage, cardTitle);
+
+  popupImage.src = cardImage.src;
+  popupTitle.textContent = cardTitle.textContent;
+
+}
 

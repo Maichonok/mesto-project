@@ -1,6 +1,4 @@
 .popup {
-  /* display: none; */
-  /* animated toggle */
   display: flex;
   height: 0;
   overflow: hidden;
