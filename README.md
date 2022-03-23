@@ -1,7 +1,8 @@
 # Проект: Место
 
 * [GitHub Pages Link](https://maichonok.github.io/mesto-project/index.html)
-* [Ссылка на макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [Ссылка на макет в Figma/sprint 2](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+* [Ссылка на макет в Figma/sprint 3](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=0%3A1)
 
 **Описание проекта и его функциональности**
 Проект Mesto Russian позволяет загружать фотографии и оставлять лайки на фото места, которое понравилось пользователям.
@@ -10,6 +11,7 @@
 **Используемые технологии**
 * HTML5
 * CSS3
+* JS
 * БЭМ Nested
 * Адаптивный дизайн
 * Flexbox and Grid Layout

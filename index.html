@@ -31,7 +31,7 @@
       </section>
       <section class="cards">
         <ul class="cards__list">
-          <li class="card">
+          <!-- <li class="card">
             <button class="card__trash-btn" type="button" aria-label="Удалить карточку"></button>
             <img class="card__pic" src="images/karachaevsk.jpg" alt="карачаевск">
             <div class="card__footer">
@@ -62,8 +62,8 @@
               <h2 class="card__title">Гора Эльбрус</h2>
               <button class="card__like-btn" type="button" aria-label="Добавить лайк"></button>
             </div>
-          </li>
-          <li class="card">
+          </li> -->
+          <!-- <li class="card">
             <button class="card__trash-btn" type="button" aria-label="Удалить карточку"></button>
             <img class="card__pic" src="images/dombai.jpg" alt="домбай">
             <div class="card__footer">
@@ -78,7 +78,7 @@
               <h2 class="card__title">Карачаево-Черкесия</h2>
               <button class="card__like-btn" type="button" aria-label="Добавить лайк"></button>
             </div>
-          </li>
+          </li> -->
         </ul>
       </section>
    </main>
@@ -120,6 +120,20 @@
       <h3 class="popup__title-image"></h3>
     </div>
   </div>
+
+
+  <template id="card-template">
+    <li class="card">
+      <button class="card__trash-btn" type="button" aria-label="Удалить карточку"></button>
+      <img class="card__pic" src="" alt="">
+      <div class="card__footer">
+        <h2 class="card__title"></h2>
+        <button class="card__like-btn" type="button" aria-label="Добавить лайк"></button>
+      </div>
+    </li>
+  </template>
+
+
 
   <script type="text/javascript" src="./script.js"></script>
 </body>
