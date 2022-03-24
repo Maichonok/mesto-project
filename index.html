@@ -40,12 +40,12 @@
   </footer>
   <div class="popup" id="edit-profile-popup">
     <div class="popup__container">
-      <button class="popup__close-btn" type="button" aria-label="Закрыть форму"></button>
-      <form class="popup__form" name="edit-profile-form">
+      <button class="popup__close-btn popup-edit__close-btn" type="button" aria-label="Закрыть форму"></button>
+      <form class="popup__form popup__form_edit-profile" name="edit-profile-form">
         <h3 class="popup__heading">Редактировать профиль</h3>
         <fieldset class="popup__input-container">
-          <input type="text" class="popup__item" name="name" placeholder="Введите ваше имя">
-          <input type="text" class="popup__item" name="profession" placeholder="Ваш род деятельности">
+          <input type="text" class="popup__form-input popup__form-input_field-name" name="name" placeholder="Введите ваше имя">
+          <input type="text" class="popup__form-input popup__form-input_field-profession" name="profession" placeholder="Ваш род деятельности">
         </fieldset>
         <button type="submit" class="popup__save-btn">Сохранить</button>
       </form>
@@ -53,12 +53,12 @@
   </div>
   <div class="popup" id="new-place-popup">
     <div class="popup__container">
-      <button class="popup__close-btn" type="button" aria-label="Закрыть форму"></button>
-      <form class="popup__form" name="add-place-form">
+      <button class="popup__close-btn popup-add__close-btn" type="button" aria-label="Закрыть форму"></button>
+      <form class="popup__form popup__form_add-place" name="add-place-form">
         <h3 class="popup__heading">Новое место</h3>
         <fieldset class="popup__input-container">
-          <input type="text" class="popup__item" name="title" placeholder="Название">
-          <input type="url" class="popup__item" name="link" placeholder="Ссылка на картинку">
+          <input type="text" class="popup__form-input popup__form-input_place-name" name="title" placeholder="Название">
+          <input type="url" class="popup__form-input popup__form-input_place-link" name="link" placeholder="Ссылка на картинку">
         </fieldset>
         <button type="submit" class="popup__create-btn">Создать</button>
       </form>
@@ -68,7 +68,7 @@
 
   <div class="popup popup_dark" id="image-preview">
     <div class="popup__preview-image">
-      <button class="popup__close-btn" type="button" aria-label="Закрыть форму"></button>
+      <button class="popup__close-btn popup-pic__close-btn" type="button" aria-label="Закрыть форму"></button>
       <img class="popup__image" src="#" alt="изображение места">
       <h3 class="popup__title-image"></h3>
     </div>
