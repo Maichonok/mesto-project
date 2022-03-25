@@ -18,10 +18,10 @@ const popupPreviewerPicture = document.querySelector('#image-preview .popup__ima
 const popupPreviewerTitle = document.querySelector('#image-preview .popup__title-image');
 
 function prefillEditProfileForm(popup) {
+  // установляем новое значение inputs
+  popupFormEditProfileFieldName.value = profileName.textContent;
+  popupFormEditProfileFieldProfession.value = profileText.textContent;
   openPopup(popup);
- // установляем новое значение inputs
- popupFormEditProfileFieldName.value = profileName.textContent;
- popupFormEditProfileFieldProfession.value = profileText.textContent;
 };
 
 function openPopup(popup) {
@@ -43,7 +43,6 @@ buttonEditPopupClose.addEventListener('click', () => {
   closePopup(popupEdit);
 });
 
-buttonEditProfile.addEventListener('click', prefillEditProfileForm);
 
 // Форма профиля
 const popupFormEditProfile = document.querySelector('.popup__form_edit-profile');
@@ -75,15 +74,15 @@ function createCard(cardName, cardLink) {
   // like card
   cardElement.querySelector('.card__like-btn')
     .addEventListener('click', (evt) => {
-      let like = evt.target;
+      const like = evt.target;
       like.classList.toggle('card__like_active-btn');
     });
 
   // delete card
   cardElement.querySelector('.card__trash-btn')
     .addEventListener('click', (evt) => {
-      let deleteButton = evt.target;
-      let card = deleteButton.closest('.card');
+      const deleteButton = evt.target;
+      const card = deleteButton.closest('.card');
 
       card.remove();
     });
@@ -91,14 +90,13 @@ function createCard(cardName, cardLink) {
   // preview image
   cardElement.querySelector('.card__pic')
     .addEventListener('click', (evt) => {
-      openPopup(popupPreviewer);
-
       const src = cardElement.querySelector('.card__pic').src;
       const title = cardElement.querySelector('.card__title').textContent;
 
       popupPreviewerPicture.src = src
       popupPreviewerPicture.alt = title;
       popupPreviewerTitle.textContent = title;
+      openPopup(popupPreviewer);
     });
     return cardElement;
 };
@@ -171,9 +169,9 @@ const popupFormPlaceLinkField = document.querySelector('.popup__form-input_place
 popupFormAddPlace.addEventListener('submit', (evt) => {
   evt.preventDefault();
   initialRender(createCard(popupFormPlaceNameField.value, popupFormPlaceLinkField.value));
+  closePopup(popupAdd);
   popupFormPlaceNameField.value = "";
   popupFormPlaceLinkField.value = "";
-  closePopup(popupAdd);
 });
 
 
