@@ -1,5 +1,5 @@
 .popup_open {
   opacity: 1;
-  height: auto;
-  transition: height 0ms 0ms, opacity 600ms 0ms;
+  transition: visibility .3s,opacity .3s ease;
+  visibility: visible;
 }

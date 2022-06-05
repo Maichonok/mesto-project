@@ -3,12 +3,10 @@ import { openPopup } from "./modal.js";
 // Конструктор карточек
 export function createCard(cardName, cardLink) {
   // обращение к template свойству content
-  const cardTemplate = document.querySelector('#card-template').content;
   const popupPreviewerPicture = document.querySelector('#image-preview .popup__image');
   const popupPreviewerTitle = document.querySelector('#image-preview .popup__title-image');
   const popupPreviewer = document.querySelector('#image-preview');
-
-  const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
+  const cardElement = getTemplate();
   const cardElementPicture = cardElement.querySelector('.card__pic');
 
   cardElement.querySelector('.card__title').textContent = cardName;
@@ -46,9 +44,8 @@ export function createCard(cardName, cardLink) {
     return cardElement;
 };
 
-// Функция выведения карточки на экран
-export function initialRender(cardElement) {
-  const cardsList = document.querySelector('.cards__list');
-  cardsList.prepend(cardElement);
-};
 
+function getTemplate() {
+  const cardTemplate = document.querySelector('#card-template').content;
+  return cardTemplate.querySelector('.card').cloneNode(true);
+}
