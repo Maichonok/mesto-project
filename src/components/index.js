@@ -8,8 +8,10 @@ import {
   buttonEditPopupClose,
   popupFormEditProfileFieldName,
   popupFormEditProfileFieldProfession,
-  popupAdd
-} from "./constants.js";
+  popupAdd,
+  popupPreviewer
+} from "./utils/constants.js";
+
 import {enableValidation} from "./validate.js";
 import {createCard} from "./card.js";
 import {openPopup, closePopup} from "./modal.js";
@@ -66,12 +68,11 @@ buttonPicturePopupClose.addEventListener('click', () => {
 
 buttonEditProfile.addEventListener('click', () => openPopup(popupEdit));
 
-
 enableValidation({
   formSelector: ".popup__form",
   inputSelector: ".popup__form-input",
   submitButtonSelector: ".popup-btn",
-  inactiveButtonClass: "popup-btn_disabled", // this shit won't work yet
+  inactiveButtonClass: "popup-btn_disabled",
   inputErrorClass: "popup__form-input_error",
   errorWrapperSelector: ".popup__error-message"
 });

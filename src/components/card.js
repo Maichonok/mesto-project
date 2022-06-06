@@ -1,12 +1,11 @@
 import { openPopup } from "./modal.js";
+import {popupPreviewer} from "./utils/constants.js";
 
 // Конструктор карточек
 export function createCard(cardName, cardLink) {
   // обращение к template свойству content
   const popupPreviewerPicture = document.querySelector('#image-preview .popup__image');
-  const popupPreviewerTitle = document.querySelector('#image-preview .popup__title-image');
-  const popupPreviewer = document.querySelector('#image-preview');
-  const cardElement = getTemplate();
+  const popupPreviewerTitle = document.querySelector('#image-preview .popup__title-image');  const cardElement = getTemplate();
   const cardElementPicture = cardElement.querySelector('.card__pic');
 
   cardElement.querySelector('.card__title').textContent = cardName;
