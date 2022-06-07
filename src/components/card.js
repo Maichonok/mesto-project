@@ -1,5 +1,5 @@
 import { openPopup } from "./modal.js";
-import {popupPreviewer} from "./utils/constants.js";
+import {popupPreviewer} from "../utils/constants.js";
 
 // Конструктор карточек
 export function createCard(cardName, cardLink) {

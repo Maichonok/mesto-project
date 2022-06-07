@@ -10,7 +10,7 @@ import {
   popupFormEditProfileFieldProfession,
   popupAdd,
   popupPreviewer
-} from "./utils/constants.js";
+} from "../utils/constants.js";
 
 import {enableValidation} from "./validate.js";
 import {createCard} from "./card.js";
