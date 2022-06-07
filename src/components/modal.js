@@ -7,7 +7,7 @@ export function openPopup(popup) {
 export function closePopup(popup) {
   popup.classList.remove('popup_open');
   document.removeEventListener('keydown',handleEscClose);
-  document.removeEventListener('mousedown', handleOverlay);
+  popup.removeEventListener('mousedown', handleOverlay);
 };
 
 function handleEscClose (evt) {
