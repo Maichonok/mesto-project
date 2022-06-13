@@ -22,5 +22,3 @@ function handleOverlay (evt) {
     closePopup(evt.target);
   }
 }
-
-

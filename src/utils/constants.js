@@ -16,6 +16,7 @@ const popupPreviewer = document.querySelector('#image-preview');
 popupFormEditProfileFieldName.value = profileName.textContent;
 popupFormEditProfileFieldProfession.value = profileText.textContent;
 
+const cardsList = document.querySelector('.cards__list');
 // Форма профиля
 const popupFormEditProfile = document.querySelector('.popup__form_edit-profile');
 
@@ -32,6 +33,15 @@ const popupAdd = document.querySelector('#new-place-popup');
 
 const buttonAddPopupClose = document.querySelector('.popup-add__close-btn');
 const buttonPicturePopupClose = document.querySelector('.popup-pic__close-btn');
+
+const popupAvatar = document.querySelector('#add-avatar');
+const avatarBtn = document.querySelector('.profile__avatar-btn');
+const closeAvatarBtn = popupAvatar.querySelector('.popup-avatar__close-btn');
+const submitAvatarBtn = popupAvatar.querySelector('.popup-submit-avatar');
+const avatarInput = popupAvatar.querySelector('.popup__form-input_avatar-link');
+const avatarImg = document.querySelector('.profile__avatar');
+const popupFormAvatar = popupAvatar.querySelector('.popup__form-avatar');
+
 
 // Инициализация карточек из массива
 const initialCards = [
@@ -78,5 +88,13 @@ export {
   popupAdd,
   buttonAddPopupClose,
   buttonPicturePopupClose,
-  initialCards
+  initialCards,
+  avatarBtn,
+  closeAvatarBtn,
+  submitAvatarBtn,
+  avatarInput,
+  avatarImg,
+  popupFormAvatar,
+  cardsList,
+  popupAvatar
 }

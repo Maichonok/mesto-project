@@ -1,9 +1,10 @@
 .profile__container {
-  display: flex;
-  gap: 30px;
+  /* display: flex;
+  gap: 30px; */
+  position: relative;
 }
 
-
+/*
 @media screen and (max-width: 1080px) {
   .profile__container  {
     width: 100%;
@@ -16,4 +17,4 @@
   .profile__container  {
    gap: 25px;
  }
-}
+} */
