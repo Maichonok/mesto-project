@@ -13,9 +13,6 @@ const buttonEditPopupClose = document.querySelector('.popup-edit__close-btn');
 // попап изображения
 const popupPreviewer = document.querySelector('#image-preview');
 
-popupFormEditProfileFieldName.value = profileName.textContent;
-popupFormEditProfileFieldProfession.value = profileText.textContent;
-
 const cardsList = document.querySelector('.cards__list');
 // Форма профиля
 const popupFormEditProfile = document.querySelector('.popup__form_edit-profile');

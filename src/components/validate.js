@@ -15,9 +15,9 @@ const hideInputError = (formElement, inputElement, settings) => {
   errorElement.textContent = '';
 };
 
-const checkInputValidity = (formElement, inputElement,settings) => {
+const checkInputValidity = (formElement, inputElement, settings) => {
   if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage,settings);
+    showInputError(formElement, inputElement, inputElement.validationMessage, settings);
   } else {
     hideInputError(formElement, inputElement, settings);
   }
@@ -45,20 +45,20 @@ const setEventListeners = (formElement, settings) => {
   });
 };
 
-const hasInvalidInput = (inputList) =>  {
+const hasInvalidInput = (inputList) => {
   return inputList.some((inputElement) => {
-  return !inputElement.validity.valid;
-});
+    return !inputElement.validity.valid;
+  });
 };
 
 const enableValidation = (settings) => {
   const formList = Array.from(document.querySelectorAll(settings.formSelector));
-  formList.forEach((formElement)=>{
-    formElement.addEventListener('submit', (evt)=>{
+  formList.forEach((formElement) => {
+    formElement.addEventListener('submit', (evt) => {
       evt.preventDefault();
     });
     setEventListeners(formElement, settings)
   });
 };
 
-export {enableValidation};
+export { enableValidation };

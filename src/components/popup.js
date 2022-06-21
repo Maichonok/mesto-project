@@ -4,76 +4,52 @@ import {
   popupEdit,
   popupFormEditProfileFieldName,
   popupFormEditProfileFieldProfession,
-  popupFormPlaceNameField,
-  popupFormPlaceLinkField,
-  cardsList,
-  popupAdd,
-  submitAvatarBtn, avatarInput, avatarImg, popupAvatar
+  submitAvatarBtn,
+  avatarInput,
+  avatarImg,
+  popupAvatar,
 } from "../utils/constants.js";
-import { closePopup } from './modal.js';
-import { loading, disabledBtn } from './utils.js';
-import { createCard } from './card';
-import { getEditProfile, getEditAvatar,getNewCard, getUser } from './api';
+import { closePopup } from "./modal.js";
+import { loading, disabledBtn } from "./utils.js";
+import { getEditProfile, getEditAvatar } from "./api";
 
-const btnAdd = document.querySelector('#submit-add');
-const submitEditBtn = document.querySelector('#submit-edit');
+const submitEditBtn = document.querySelector("#submit-edit");
 
-export function submitProfileEdit (evt) {
+export function submitProfileEdit(evt) {
   evt.preventDefault();
-  loading(true,submitEditBtn)
-  getEditProfile(popupFormEditProfileFieldName.value, popupFormEditProfileFieldProfession.value)
-    .then(()=>{
-    profileName.textContent = `${popupFormEditProfileFieldName.value}`;
-    profileText.textContent = `${popupFormEditProfileFieldProfession.value}`;
-    evt.target.reset();
-    closePopup(popupEdit);
-  })
-    .catch((err)=>{
-      console.log(err)
-    })
-    .finally(()=>{
-      loading(false,submitEditBtn)
-    })
-};
-
-// Добавляем карточки с кнопки
-
-export function submitAddCard (evt) {
-  evt.preventDefault();
-  loading(true, btnAdd)
-  Promise.all([getNewCard(popupFormPlaceNameField.value, popupFormPlaceLinkField.value), getUser()])
-    .then(([dataCard, dataUser])=>{
-      const card = createCard(dataCard.name, dataCard.link, dataCard.likes, dataCard.owner._id,dataCard._id,dataUser._id);
-      cardsList.prepend(card);
-    })
-    .then(()=>{
+  loading(true, submitEditBtn);
+  getEditProfile(
+    popupFormEditProfileFieldName.value,
+    popupFormEditProfileFieldProfession.value
+  )
+    .then(() => {
+      profileName.textContent = `${popupFormEditProfileFieldName.value}`;
+      profileText.textContent = `${popupFormEditProfileFieldProfession.value}`;
       evt.target.reset();
-      disabledBtn(btnAdd);
-      closePopup(popupAdd);
+      closePopup(popupEdit);
     })
-  .catch((err)=>{
-      console.log(err)
+    .catch((err) => {
+      console.log(err);
     })
-    .finally(()=>{
-      loading(false, btnAdd)
-    })
+    .finally(() => {
+      loading(false, submitEditBtn);
+    });
 }
 
-export function submitAvatar (evt) {
+export function submitAvatar(evt) {
   evt.preventDefault();
-  loading(true,submitAvatarBtn)
+  loading(true, submitAvatarBtn);
   getEditAvatar(avatarInput.value)
-  .then(()=>{
-      avatarImg.src=avatarInput.value
+    .then(() => {
+      avatarImg.src = avatarInput.value;
       closePopup(popupAvatar);
       disabledBtn(submitAvatarBtn);
       evt.target.reset();
     })
-    .catch((err)=>{
-      console.log(err)
+    .catch((err) => {
+      console.log(err);
     })
-    .finally(()=>{
-      loading(false,submitAvatarBtn)
-    })
+    .finally(() => {
+      loading(false, submitAvatarBtn);
+    });
 }
-
