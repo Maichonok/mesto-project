@@ -39,8 +39,6 @@ closeAvatarBtn.addEventListener("click", () => {
   closePopup(popupAvatar);
 });
 
-popupFormAvatar.addEventListener("submit", submitAvatar);
-
 popupFormEditProfile.addEventListener("submit", submitProfileEdit);
 buttonPicturePopupClose.addEventListener("click", () => {
   closePopup(popupPreviewer);

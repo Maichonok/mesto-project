@@ -39,6 +39,13 @@ const avatarInput = popupAvatar.querySelector('.popup__form-input_avatar-link');
 const avatarImg = document.querySelector('.profile__avatar');
 const popupFormAvatar = popupAvatar.querySelector('.popup__form-avatar');
 
+ // обращение к template свойству content
+ const popupPreviewerPicture = document.querySelector(
+  "#image-preview .popup__image"
+);
+const popupPreviewerTitle = document.querySelector(
+  "#image-preview .popup__title-image"
+);
 
 // Инициализация карточек из массива
 const initialCards = [
@@ -93,5 +100,7 @@ export {
   avatarImg,
   popupFormAvatar,
   cardsList,
-  popupAvatar
+  popupAvatar,
+  popupPreviewerPicture,
+  popupPreviewerTitle
 }

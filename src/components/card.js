@@ -1,5 +1,9 @@
 import { openPopup } from "./modal.js";
-import { popupPreviewer } from "../utils/constants.js";
+import {
+  popupPreviewer,
+  popupPreviewerPicture,
+  popupPreviewerTitle,
+} from "../utils/constants.js";
 import { getDeleteCard, getPutLikes, getDelLike } from "./api";
 
 // Конструктор карточек
@@ -11,13 +15,6 @@ export function createCard(
   idCard,
   myId
 ) {
-  // обращение к template свойству content
-  const popupPreviewerPicture = document.querySelector(
-    "#image-preview .popup__image"
-  );
-  const popupPreviewerTitle = document.querySelector(
-    "#image-preview .popup__title-image"
-  );
   const cardElement = getTemplate();
 
   const cardElementPicture = cardElement.querySelector(".card__pic");
@@ -76,7 +73,7 @@ export function createCard(
     });
 
   // preview image
-  cardElement.querySelector(".card__pic").addEventListener("click", (evt) => {
+  cardElementPicture.addEventListener("click", (evt) => {
     popupPreviewerPicture.src = cardLink;
     popupPreviewerPicture.alt = cardName;
     popupPreviewerTitle.textContent = cardName;
